@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140822204937) do
+ActiveRecord::Schema.define(version: 20140822210640) do
+
+  create_table "campaigns", force: true do |t|
+    t.string   "name"
+    t.integer  "money"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "campaigns", ["user_id"], name: "index_campaigns_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
