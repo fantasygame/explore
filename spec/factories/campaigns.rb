@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :campaign do
-    name "MyString"
-    money 1
-    user nil
+    name "Powrót Imperagona"
+    money 100
+    user
   end
 end

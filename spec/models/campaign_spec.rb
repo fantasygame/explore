@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Campaign, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'has name' do
+    c = FactoryGirl.buid(:campaign)
+    c.name = ''
+    expect(c).to_not be_valid
+  end
 end

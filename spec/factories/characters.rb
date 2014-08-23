@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :character do
-    name "MyString"
-    exp 1
-    user nil
-    campaign nil
+    name "Imperagon"
+    exp 10
+    user
+    campaign
   end
 end
