@@ -25,7 +25,7 @@ RSpec.describe Character, :type => :model do
 
     it "can't calculate from negative value" do
       @character.exp = -1
-      expect(@character.level).to raise_exception
+      expect {@character.level}.to raise_error
     end
 
     it "calculates properly" do

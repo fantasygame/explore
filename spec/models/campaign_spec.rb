@@ -24,18 +24,6 @@ RSpec.describe Campaign, :type => :model do
     expect(c).to respond_to('users')
   end
 
-  it 'has at least one character' do
-    c = FactoryGirl.build(:campaign)
-    c.characters = []
-    expect(c).not_to be_valid
-  end
-
-  it 'has at least one users' do
-    c = FactoryGirl.build(:campaign)
-    c.users = []
-    expect(c).not_to be_valid
-  end
-
   it 'can counts team_level' do
     c = FactoryGirl.build(:campaign)
     expect(c).to respond_to('team_level')
