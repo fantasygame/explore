@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20140823141717) do
     t.string "name",              null: false
     t.string "altname"
     t.string "size"
-    t.string "type"
+    t.string "monster_type"
     t.string "descriptor"
     t.string "hit_dice"
     t.string "initiative"

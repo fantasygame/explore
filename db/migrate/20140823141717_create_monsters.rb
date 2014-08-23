@@ -5,7 +5,7 @@ class CreateMonsters < ActiveRecord::Migration
       t.string "name",              limit: nil, null: false
       t.string "altname",           limit: nil
       t.string "size",              limit: nil
-      t.string "type",              limit: nil
+      t.string "monster_type",      limit: nil
       t.string "descriptor",        limit: nil
       t.string "hit_dice",          limit: nil
       t.string "initiative",        limit: nil
