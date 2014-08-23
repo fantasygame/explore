@@ -36,4 +36,29 @@ RSpec.describe Campaign, :type => :model do
     expect(c).not_to be_valid
   end
 
+  it 'can counts team_level' do
+    c = FactoryGirl.build(:campaign)
+    expect(c).to respond_to('team_level')
+  end
+
+  it 'counts team_level properly' do
+    c = FactoryGirl.build(:campaign)
+    x = FactoryGirl.build(:character)
+    y = FactoryGirl.build(:character)
+    z = FactoryGirl.build(:character)
+    c.characters = [x,y,z]
+    x.exp = 3000
+    y.exp = 1000
+    z.exp = 3000
+    expect(c.team_level).to equal 3
+
+  end
+
+  it 'has at least one character to count team_level' do
+    c = FactoryGirl.build(:campaign)
+    expect(c.team_level).to equal 0
+  end
+
+
+
 end

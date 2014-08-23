@@ -4,7 +4,7 @@ FactoryGirl.define do
   factory :character do
     name "Imperagon"
     exp 10
-    user
+    # user
     campaign
   end
 end

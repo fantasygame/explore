@@ -18,7 +18,6 @@ class Character < ActiveRecord::Base
         current_exp = current_exp - lvl
         lvl += 1
       end
-
       lvl
       end
     end
