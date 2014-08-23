@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823110344) do
+ActiveRecord::Schema.define(version: 20140823141717) do
 
   create_table "campaigns", force: true do |t|
     t.string   "name"
@@ -40,6 +40,44 @@ ActiveRecord::Schema.define(version: 20140823110344) do
   end
 
   add_index "events", ["campaign_id"], name: "index_events_on_campaign_id"
+
+  create_table "monsters", force: true do |t|
+    t.string "family"
+    t.string "name",              null: false
+    t.string "altname"
+    t.string "size"
+    t.string "type"
+    t.string "descriptor"
+    t.string "hit_dice"
+    t.string "initiative"
+    t.string "speed"
+    t.string "armor_class"
+    t.string "base_attack"
+    t.string "grapple"
+    t.string "attack"
+    t.text   "full_attack"
+    t.string "space"
+    t.string "reach"
+    t.string "special_attacks"
+    t.text   "special_qualities"
+    t.string "saves"
+    t.string "abilities"
+    t.text   "skills"
+    t.string "bonus_feats"
+    t.text   "feats"
+    t.text   "epic_feats"
+    t.string "environment"
+    t.text   "organization"
+    t.string "challenge_rating"
+    t.string "treasure"
+    t.string "alignment"
+    t.string "advancement"
+    t.string "level_adjustment"
+    t.text   "special_abilities"
+    t.text   "stat_block"
+    t.text   "full_text"
+    t.string "reference"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
