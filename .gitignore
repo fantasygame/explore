@@ -17,3 +17,6 @@
 
 # Ide
 /.idea/
+
+# Temp vim files
+*swp
