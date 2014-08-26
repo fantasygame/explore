@@ -12,7 +12,6 @@ RSpec.describe Roll do
     expect(Roll.roll 100, 14).to be_between(14, 1400)
     expect(Roll.roll 8, 8).to be_between(8, 64)
     expect(Roll.roll 16, 0).to equal 0 
-    expect(Roll.roll 0, 10).to raise_error
   end
 end
 
