@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823141717) do
+ActiveRecord::Schema.define(version: 20140928175531) do
 
   create_table "campaigns", force: true do |t|
     t.string   "name"
@@ -97,5 +97,12 @@ ActiveRecord::Schema.define(version: 20140823141717) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "wealths", force: true do |t|
+    t.integer  "level"
+    t.integer  "money"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

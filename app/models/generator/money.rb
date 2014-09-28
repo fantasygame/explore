@@ -2,13 +2,17 @@ class Generator::Money
 
   def generate(team_level)
     roll = Roll.d100
-
+    percent = value_percent team_level
+    money = Wealth.find_by(level: team_level).money
+    average_value = money*percent/100.0
+    (average_value * (roll*2/100.0)).round
   end
+
   private
   def value_percent(team_level)
     case team_level
       when 1
-        100
+        80
       when 2
         66
       when 3
@@ -17,7 +21,7 @@ class Generator::Money
         22
       when 5
         18
-      when team_level.between? 6, 9
+      when 6..9
         21 - team_level
       else 11
     end

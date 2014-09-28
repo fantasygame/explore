@@ -7,5 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # This code loads seeds from db/seeds in specified order
-files = %w(monsters)
+files = %w(monsters wealth)
 files.each {|f| load File.join(Rails.root, 'db', 'seeds', "#{f.to_s}.rb").to_s}
