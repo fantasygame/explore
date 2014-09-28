@@ -1,10 +1,5 @@
 class Roll
 
-  def initialize(quantity, value)
-    @quantity = quantity
-    @value = value
-  end
-
   def self.method_missing(name, *args, &block)
     name = name.to_s
     if name =~ /^[d,k]\d+$/
@@ -13,10 +8,10 @@ class Roll
         quantity = args[0]
       end
       die = name.match(/^[d,k](\d+)$/)[1].to_i
+      self.roll die, quantity
     else
       super
     end
-    self.roll die, quantity
   end
 
   def self.roll(die, quantity = 1)
