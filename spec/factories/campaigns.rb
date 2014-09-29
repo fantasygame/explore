@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :campaign do
-    name "Powrót Imperagona"
+    name "Powrot Imperagona"
     money 100
   end
 end
