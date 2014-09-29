@@ -15,4 +15,4 @@ Planned features:
   - team items
   - selling and buying items in shop
 
-https://travis-ci.org/jkubacki/explore.svg?branch=master
+[![Build Status](https://travis-ci.org/jkubacki/explore.svg?branch=master)](https://travis-ci.org/jkubacki/explore)
