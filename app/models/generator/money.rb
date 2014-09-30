@@ -4,8 +4,8 @@ class Generator::Money
     roll = Roll.d100
     percent = value_percent team_level
     money = Wealth.find_by(level: team_level).money
-    average_value = money*percent/100.0
-    (average_value * (roll*2/100.0)).round
+    average_value = money * percent / 100.0
+    (average_value * (roll * 2 / 100.0)).round
   end
 
   private
@@ -23,7 +23,8 @@ class Generator::Money
         18
       when 6..9
         21 - team_level
-      else 11
+      else
+        11
     end
   end
 

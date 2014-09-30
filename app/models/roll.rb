@@ -9,8 +9,6 @@ class Roll
       end
       die = name.match(/^[d,k](\d+)$/)[1].to_i
       self.roll die, quantity
-    else
-      super
     end
   end
 
