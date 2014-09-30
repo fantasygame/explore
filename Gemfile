@@ -35,6 +35,10 @@ group :development, :test do
   gem 'awesome_print'
 end
 
+group :test do
+  gem 'simplecov', require: false
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

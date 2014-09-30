@@ -20,3 +20,6 @@
 
 # Temp vim files
 *swp
+
+# Coverage files
+coverage/

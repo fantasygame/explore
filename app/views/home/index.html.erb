@@ -1,2 +1,7 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>D&D Explore</h1>
+
+<% if Rails.env.development? %>
+  <p><%= link_to 'Code Coverage', 'http://localhost:63342/explore/coverage/index.html#_AllFiles', target: '_blank' %></p>
+  <p><%= link_to 'GitHub', 'https://github.com/jkubacki/explore', target: '_blank' %></p>
+  <p><%= link_to image_tag('https://travis-ci.org/jkubacki/explore.svg?branch=master'), 'https://travis-ci.org/jkubacki/explore', target: '_blank' %></p>
+<% end %>
