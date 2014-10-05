@@ -2,7 +2,7 @@
   <% if current_user %>
     <%= menu_group do %>
       <%= menu_item "Campaigns", campaigns_path %>
-      <%= menu_item "Characters", home_index_path %>
+      <%= menu_item "Characters", characters_path %>
         <% if false %>
           <%= drop_down "Products" do %>
             <%= menu_item "Things you can't afford", home_index_path %>
