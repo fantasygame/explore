@@ -7,8 +7,8 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:level) %></th>
       <th><%= model_class.human_attribute_name(:exp) %></th>
-      <th><%= model_class.human_attribute_name(:user_id) %></th>
       <th><%= model_class.human_attribute_name(:campaign_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -19,9 +19,9 @@
       <tr>
         <td><%= link_to character.id, character_path(character) %></td>
         <td><%= character.name %></td>
+        <td><%= character.level %></td>
         <td><%= character.exp %></td>
-        <td><%= character.user_id %></td>
-        <td><%= character.campaign_id %></td>
+        <td><%= character.campaign.name %></td>
         <td><%=l character.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
