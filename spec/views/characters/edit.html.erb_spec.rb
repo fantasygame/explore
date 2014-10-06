@@ -19,9 +19,7 @@ RSpec.describe "characters/edit", :type => :view do
 
       assert_select "input#character_exp[name=?]", "character[exp]"
 
-      assert_select "input#character_user_id[name=?]", "character[user_id]"
-
-      assert_select "input#character_campaign_id[name=?]", "character[campaign_id]"
+      assert_select "select#character_campaign_id[name=?]", "character[campaign_id]"
     end
   end
 end
