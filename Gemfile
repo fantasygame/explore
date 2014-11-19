@@ -27,12 +27,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'devise'
+gem 'awesome_print'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
-  gem 'awesome_print'
   gem 'did_you_mean'
   gem 'guard-rspec'
 end
